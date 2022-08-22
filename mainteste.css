@@ -33,8 +33,13 @@ header li a:hover {
 }
 
 .container {
+<<<<<<< HEAD:mainteste.css
     width: 1366px;
     margin: auto;
+=======
+    width: 100%;
+    margin: 0 auto;
+>>>>>>> 7cac84d493f2831e9627a12384bca648b8e999e3:main.css
 }
 
 .articles {
