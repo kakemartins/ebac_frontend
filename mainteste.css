@@ -34,7 +34,7 @@ header li a:hover {
 
 .container {
     width: 1366px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .articles {
