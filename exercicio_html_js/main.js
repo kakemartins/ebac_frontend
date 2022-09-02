@@ -1,16 +1,16 @@
 const form = document.getElementById('form-verifica');
-const numeroA = document.getElementById('numero-a');
 let formEValido = false;
 
 function validaNumero (a, b) {
-    return a > b;
+    return b > a;
 }
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     
+    const numeroA = document.getElementById('numero-a');
     const numeroB = document.getElementById('numero-b');
-    const msgPositiva = `Muito bem, o número A: <b>${numeroA.value}</b> é maior que o número B: <b>${numeroB.value}</b>`;
+    const msgPositiva = `Muito bem, o número B: <b>${numeroB.value}</b> é maior que o número A: <b>${numeroA.value}</b>`;
 
     formEValido = validaNumero(numeroA.value, numeroB.value);
     if (formEValido) {
@@ -20,12 +20,12 @@ form.addEventListener('submit', function(e) {
 
         numeroA.value = '';
         numeroB.value = '';
-        numeroA.style.border = '';
+        numeroB.style.border = '';
         document.querySelector('.error-message').style.display = 'none';
 
 
     } else {
-        numeroA.style.border = '1px solid red';
+        numeroB.style.border = '1px solid red';
         document.querySelector('.error-message').style.display = 'block';
     }
 
